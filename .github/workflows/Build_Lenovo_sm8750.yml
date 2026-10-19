@@ -454,7 +454,7 @@ jobs:
         run: |
           cd kernel_workspace
           echo "正在配置BakaSU..."
-          curl -LSs "https://raw.githubusercontent.com/Baka-SU/BakaSU/refs/heads/main/kernel/setup.sh" | bash -s main
+          curl -LSs "https://raw.githubusercontent.com/Baka-SU/BakaSU/refs/heads/main/kernel/setup.sh" | bash -s v4.2.0-rc3
           cd ./KernelSU 
           KSU_VERSION=$(expr $(git rev-list --count origin/main 2>/dev/null) + 30700 2>/dev/null || echo 114514)
           echo "KSUVER=$KSU_VERSION" >> $GITHUB_ENV
