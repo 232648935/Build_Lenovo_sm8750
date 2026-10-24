@@ -457,6 +457,7 @@ jobs:
           git clone https://github.com/232648935/7kimisu-susfs.git KernelSU
           cd ./KernelSU
           git checkout v2.30
+          ln -sfn ../uapi ./kernel/uapi
           cd ..
           DRIVER_DIR="./common/drivers"
           ln -sf "$(realpath --relative-to="$DRIVER_DIR" "$(pwd)/KernelSU/kernel")" "$DRIVER_DIR/kernelsu"
